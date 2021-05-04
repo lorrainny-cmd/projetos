@@ -1,3 +1,5 @@
+//ex vip 03
+
 main() {
   Ingresso ingresso1 = Ingresso();
   VIP vip1 = VIP();

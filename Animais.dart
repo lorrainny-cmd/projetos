@@ -1,7 +1,7 @@
 // @dart=2.9
 main() {
-  Homem homem = Homem("dono", 1.76, "Pardo");
-  Cao cao = Cao("Vira lata", 1.0, "Preto");
+  Homem homem = Homem("Dono", 1.76, "Pardo");
+  Cao cao = Cao("cachorro", 1.0, "Preto");
 
   print(homem.nome);
   print(cao.comprimento);

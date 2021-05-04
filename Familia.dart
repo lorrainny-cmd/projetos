@@ -1,14 +1,12 @@
-// @dart=2.9
-// @dart para passar o null como parametro
 void main() {
-  Pessoa maria = Pessoa("Maria", null, null);
-  Pessoa alvino = Pessoa("Alvino", null, null);
-  Pessoa marielsa = Pessoa.somenteNome('Marielsa');
-  Pessoa ricardo = Pessoa("Ricardo", maria, alvino);
-  Pessoa luccas = Pessoa('Luccas', marielsa, ricardo);
-  Pessoa miguel = Pessoa("Miguel", marielsa, ricardo);
+  Pessoa ana = Pessoa("Ana", null, null);
+  Pessoa ricardo = Pessoa("Ricardo", null, null);
+  Pessoa clara = Pessoa.somenteNome('Clara');
+  Pessoa ricardo = Pessoa("Ricardo", ana, ricardo);
+  Pessoa luan = Pessoa('Luan', clara, ricardo);
+  Pessoa caua = Pessoa("Caua", clara, ricardo);
 
-  luccas.meuIrmao(miguel);
+  luan.meuIrmao(caua);
 }
 
 class Pessoa {
@@ -23,31 +21,31 @@ class Pessoa {
     if (outraPessoa.nome == nome && outraPessoa.mae == mae) {
       print("Somos semelhantes");
     } else {
-      print("Nada haver");
+      print("Não somos semelhantes");
     }
   }
 
   void meuIrmao(Pessoa outraPessoa) {
     if (outraPessoa.mae == mae || outraPessoa.pai == pai) {
-      print("eh meu irmao!");
+      print("meu irmao!");
     }
   }
 
   void ehParentesco(Pessoa outraPessoa) {
     if (outraPessoa == mae) {
-      print('${outraPessoa.nome} é minha mãe!');
+      print('${outraPessoa.nome} minha mãe!');
     }
 
     if (outraPessoa == pai) {
-      print('${outraPessoa.nome} é meu pai!');
+      print('${outraPessoa.nome} meu pai!');
     }
 
     if (outraPessoa == mae.pai || outraPessoa == mae.mae) {
-      print('${outraPessoa.nome} é meu avô ou avó!');
+      print('${outraPessoa.nome} meu avô ou avó!');
     }
 
     if (outraPessoa == pai.pai || outraPessoa == mae.mae) {
-      print('${outraPessoa.nome} é meu avô ou avó!');
+      print('${outraPessoa.nome} meu avô ou avó!');
     }
   }
 }
